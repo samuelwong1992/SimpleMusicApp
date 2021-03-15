@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gxp-LA-vio">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Navigation Controller-->
+        <scene sceneID="EqT-Jt-fYF">
+            <objects>
+                <navigationController id="gxp-LA-vio" customClass="MainNavigationController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vP8-3U-Ehb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CgY-YC-cCd" kind="relationship" relationship="rootViewController" id="y9P-pr-eid"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edn-dS-0DC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1672" y="138"/>
+        </scene>
+        <!--Landing View Controller-->
+        <scene sceneID="KRI-qR-sdB">
+            <objects>
+                <viewController id="CgY-YC-cCd" customClass="LandingViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Stc-Uj-fUb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TCF-iv-RVF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" textLabel="bFA-YK-yz0" style="IBUITableViewCellStyleDefault" id="3Mu-GE-Z2t">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Mu-GE-Z2t" id="AgE-uA-zGQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bFA-YK-yz0">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RII-0m-80Y">
+                                <rect key="frame" x="24" y="88" width="366" height="774"/>
+                                <string key="text">This App Requires Music Library Permissions in order to display and play your music.
+
+If you are seeing this, go to Settings &gt; MusicPlayer to enable Access to Media</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U01-5t-8yu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U01-5t-8yu" firstAttribute="trailing" secondItem="TCF-iv-RVF" secondAttribute="trailing" id="0lC-ch-hwe"/>
+                            <constraint firstItem="U01-5t-8yu" firstAttribute="bottom" secondItem="RII-0m-80Y" secondAttribute="bottom" id="2MU-6V-b9P"/>
+                            <constraint firstItem="U01-5t-8yu" firstAttribute="trailing" secondItem="RII-0m-80Y" secondAttribute="trailing" constant="24" id="8ad-bm-0AE"/>
+                            <constraint firstItem="TCF-iv-RVF" firstAttribute="leading" secondItem="U01-5t-8yu" secondAttribute="leading" id="EJL-Kk-Kl3"/>
+                            <constraint firstItem="TCF-iv-RVF" firstAttribute="top" secondItem="U01-5t-8yu" secondAttribute="top" id="JTR-Md-4Hk"/>
+                            <constraint firstItem="RII-0m-80Y" firstAttribute="top" secondItem="U01-5t-8yu" secondAttribute="top" id="Wh8-qW-07X"/>
+                            <constraint firstItem="U01-5t-8yu" firstAttribute="bottom" secondItem="TCF-iv-RVF" secondAttribute="bottom" id="hSw-PS-wd3"/>
+                            <constraint firstItem="RII-0m-80Y" firstAttribute="leading" secondItem="U01-5t-8yu" secondAttribute="leading" constant="24" id="lLq-DH-7v1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6AI-BG-lJf"/>
+                    <connections>
+                        <outlet property="tableView" destination="TCF-iv-RVF" id="LAJ-hY-08Y"/>
+                        <outlet property="warningLabel" destination="RII-0m-80Y" id="yaj-Ig-dqS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxb-uz-xe5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-878" y="138"/>
+        </scene>
+        <!--Media Object List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MediaObjectListViewController" id="BYZ-38-t0r" customClass="MediaObjectListViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JCF-O7-KqE">
+                                <rect key="frame" x="0.0" y="44" width="399" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" textLabel="xoL-vC-yel" style="IBUITableViewCellStyleDefault" id="AD4-Dd-gpD">
+                                        <rect key="frame" x="0.0" y="28" width="399" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AD4-Dd-gpD" id="e3A-8o-v4g">
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xoL-vC-yel">
+                                                    <rect key="frame" x="20" y="0.0" width="359" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74s-6s-A4a">
+                                <rect key="frame" x="399" y="44" width="15" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="cL7-4x-Gem"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JCF-O7-KqE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="17e-hN-tmI"/>
+                            <constraint firstItem="74s-6s-A4a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M7v-tC-UAu"/>
+                            <constraint firstItem="74s-6s-A4a" firstAttribute="leading" secondItem="JCF-O7-KqE" secondAttribute="trailing" id="NJ9-NB-5Wo"/>
+                            <constraint firstItem="JCF-O7-KqE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q7f-lC-EGr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="74s-6s-A4a" secondAttribute="trailing" id="bHA-YF-qie"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="74s-6s-A4a" secondAttribute="bottom" id="cR2-hg-foy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JCF-O7-KqE" secondAttribute="bottom" id="vYh-yf-Jql"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alphabetScrollView" destination="74s-6s-A4a" id="rDi-eV-TtP"/>
+                        <outlet property="tableView" destination="JCF-O7-KqE" id="Pko-XS-7Ey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104.34782608695653" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
